@@ -16,8 +16,11 @@
 
         <div id="app">
             <img src="image/logo.png" id="logo" alt="Welcome to the club!" style="margin-left:auto;">
-            <button type="button" id="login">Login</button>
-            <button type="button" id="sign_up">Sign up</button>
+            <button type="button" id = "here" v-on:click.stop = "showLog_Sign = true">Log in here!</button>
+            <div id="log_sign" v-if="showLog_Sign">
+            <button type="button" id="login" v-on:click="login()">Login</button>
+            <button type="button" id="sign_up" v-on:click="sign_up()">Sign up</button>
+            </div>
             <header>
                     <ul>
                         <li><a href="/main.html">Home</a></li>

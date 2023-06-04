@@ -12,8 +12,25 @@ const vueinst = new Vue({
             username: "",
             password: ""
         },
-
+        showLog_Sign:false
+        },
+    mounted(){
+        document.addEventListener("click",this.hidelog_sign);
+    },
+    methods:{
+        hidelog_sign(){
+            this.showLog_Sign = false;
+        },
+        login(){
+            window.location.href = "/login.html";
+        },
+        sign_up(){
+            window.location.href = "/signup.html";
         }
+    },
+    beforeDestroy(){
+        document.removeEventListener("click",this.hidelog_sign);
+    },
 });
 
 const logo = document.getElementById('logo');
