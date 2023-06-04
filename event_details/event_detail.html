@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Practical Excercise 6</title>
+
+        <meta charset="UTF-8">
+        <script src="/main.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <link rel="stylesheet" href=/stylesheets/main.css>
+
+    </head>
+
+    <body>
+
+        <div id="app">
+            <img src="/image/logo.png" alt="Welcome to the club!" style="margin-left:auto;">
+            <button type="button" id="login">Login</button>
+            <button type="button" id="sign_up">Sign up</button>
+            <header>
+                    <ul>
+                        <li><a href="/main.html">Home</a></li>
+                        <li><a href="/Events.html">Events</a></li>
+                        <li><a href="/Clubs.html">Clubs</a></li>
+                        <li><a href="/About.html">About</a></li>
+                    </ul>
+                    <br>
+                    <div class="search_bar">
+                        <input type="text"><button type="button">Search</button>
+                    </div>
+            </header>
+
+            <div class="event_detail">
+                <h1 id="event_name">Event Name</h1>
+                <br>
+                <div id="event_date"></div>
+                <br>
+                <div id="event_infor"></div>
+
+                <button type="button" href="/login.html" onclick="you_need_to_login_first()">JOIN</button>
+                <button type="button" href="/login.html" onclick="you_need_to_login_first()">Mabe next time</button>
+            </div>
+
+            <footer><p>&copy; Social Student Club</p></footer>
+
+        </div>
+    </body>
+
+</html>

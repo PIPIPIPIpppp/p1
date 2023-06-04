@@ -1,0 +1,49 @@
+.text-center{
+    text-align: center;
+    margin: 10px;
+}
+.container_mt-5 {
+    border:10px solid #ff9000;
+    margin:110px 110px 50px 110px;
+    padding: 50px;
+
+}
+.row_justify-content-center{
+    text-align: center;
+    margin: 20px;
+}
+.g-signin2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mb-3{
+    text-align: left;
+}
+#username{
+    margin-left: 1px;
+}
+#firstname{
+    margin-left: 6px;
+}
+#lastname{
+    margin-left: 7px;
+}
+#password{
+    margin-left: 12px;
+}
+#email{
+    margin-left:35px;
+}
+#mobile{
+    margin-left:35px;
+}
+#major{
+    margin-left: 42px;
+}
+#age{
+    margin-left: 55px;
+}
+.label{
+    font-size: 100px;
+}

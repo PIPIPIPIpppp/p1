@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Practical Excercise 6</title>
+
+        <meta charset="UTF-8">
+        <script src="/main.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <link rel="stylesheet" href="/stylesheets/main.css">
+
+    </head>
+
+    <body>
+
+        <div id="app">
+            <img src="/image/logo.png" id="logo" alt="Welcome to the club!" style="margin-left:auto;">
+            <a id="sign_up" href="/Admin/Admin_profile.html">Hello Admin</a>
+            <button type="button" id="login">Log out</button>
+
+            <header>
+                    <ul>
+                        <li><a href="/Admin/main.html">Home</a></li>
+                        <li><a href="/Admin/Events.html">Events</a></li>
+                        <li><a href="/Admin/Clubs.html">Clubs</a></li>
+                        <li><a href="/Admin/About.html">About</a></li>
+                    </ul>
+                    <br>
+                    <div class="search_bar">
+                        <input type="text"><button type="button">Search</button>
+                    </div>
+            </header>
+
+
+            <div class="event_detail">
+                <h1 id="event_name">Football Club open day!</h1>
+                <br>
+                <div id="event_date">08/Aug/2023</div>
+                <br>
+                <div id="event_infor">$5 entry</div>
+\
+                <button type="button" href="/login.html" onclick="you_need_to_login_first()">JOIN</button>
+                <button type="button" href="/login.html" onclick="you_need_to_login_first()">Mabe next time</button>
+            </div>
+        </div>
+            <footer><p>&copy; Social Student Club</p></footer>
+
+    </body>
+
+</html>
