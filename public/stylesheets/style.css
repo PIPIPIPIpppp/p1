@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: antiquewhite;
+  color: #c982ca;
+}
+
+a {
+  color: #00B7FF;
+}
+.search_area{
+  text-align: center;
+}
+.image_l{
+  width: 20%;
+  float:left;
+  text-align: center;
+}
+.p_r{
+  width: 80%;
+  float:right;
+}
+.konghang{
+  clear: both;
+}

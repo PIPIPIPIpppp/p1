@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="javascripts/kaoshi.js" defer></script>
+</head>
+
+<body>
+<div id="app">
+    <h1>Welcome to Shoes web</h1>
+    <div class="search_area">
+        <p>Search here!</p>
+    <input id="search_bar" type="text" placeholder="search by different filters">
+    <button type="button" onclick="douxing()">Search</button>
+    <select name="filters" id="dropdown_menu">
+        <option value="size">Size</option>
+        <option value="brand">Brand</option>
+        <option value="style">Style</option>
+        <option value="price">Price</option>
+    </select>
+    </div>
+
+
+    <hr>
+
+    <div class="shoes_choice" v-for="i in suoyouxie">
+        <div class="image_l">
+        <img v-bind:src="i.images" width="50%" alt="/">
+        </div>
+        <div class="p_r">
+        <p>size: {{i.size}}</p>
+        <p>style: {{i.style}}</p>
+        <p>brand: {{i.brand}}</p>
+        <p>price: ${{i.price}}</p>
+        </div>
+        <div class="konghang"></div>
+        <hr>
+    </div>
+</div>
+</body>
+</html>

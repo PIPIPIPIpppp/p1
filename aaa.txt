@@ -6,3 +6,48 @@ CREATE TABLE User (
     email varchar(255),
     PRIMARY KEY (userID)
 );
+CREATE TABLE Shoes (
+    shoeID int AUTO_INCREMENT,
+    size int,
+    style varchar(255),
+    brand varchar(255),
+    price float,
+    images varchar(255),
+    PRIMARY KEY (shoeID)
+);
+CREATE TABLE History (
+    HistoryID int AUTO_INCREMENT,
+    userID int,
+    shoeID int,
+    Bookingdate DATE DEFAULT '2019-09-09',
+    PRIMARY KEY (HistoryID),
+    FOREIGN KEY (userID) REFERENCES User(userID),
+    FOREIGN KEY (shoeID) REFERENCES Shoes(shoeID)
+);
+INSERT INTO User (username, password, name, email)
+VALUES ('Mike','123','Bitch','abc@gmail.com');
+
+INSERT INTO User (username, password, name, email)
+VALUES ('JOn','456','qq','asd@gmail.com');
+
+INSERT INTO Shoes (size, style, brand, price, images)
+VALUES (2,'fashion','Nike', 344, 'image/aj.png');
+
+INSERT INTO Shoes (size, style, brand, price, images)
+VALUES (3,'Sport','Adidas', 299, 'image/kk.png');
+
+INSERT INTO History (userID, shoeID, Bookingdate)
+VALUES (1,2,'2019-01-01');
+INSERT INTO History (userID, shoeID, Bookingdate)
+VALUES (2,2,'2013-06-06');
+INSERT INTO History (userID, shoeID, Bookingdate)
+VALUES (2,1,'2023-06-05');
+INSERT INTO History (userID, shoeID, Bookingdate)
+VALUES (2,1,'2019-09-07');
+INSERT INTO History (userID, shoeID, Bookingdate)
+VALUES (2,1,'2019-09-06');
+
+
+SELECT User.name, User.email FROM User JOIN History ON History.userID = User.userID WHERE Bookingdate > now() - INTERVAL 10 day;
+
+SELECT * FROM Shoes WHERE brand LIKE '%N%';
